@@ -19,10 +19,10 @@ class TestCropAndResize:
             [13., 14., 15., 16.],
         ]])
 
-        height, width = 2, 2
+        height, width = 2, 3
         expected = torch.tensor([[
-            [6., 7.],
-            [10., 11.],
+            [6., 6.5, 7.],
+            [10., 10.5, 11.],
         ]])
 
         boxes = torch.tensor([[
