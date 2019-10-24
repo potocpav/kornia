@@ -71,9 +71,9 @@ def crop_and_resize(tensor: torch.Tensor, boxes: torch.Tensor,
     # top-left, top-right, bottom-left, bottom-right
     points_dst: torch.Tensor = torch.tensor([[
         [0, 0],
-        [0, dst_w - 1],
-        [dst_h - 1, 0],
-        [dst_h - 1, dst_w - 1],
+        [0, dst_h - 1],
+        [dst_w - 1, 0],
+        [dst_w - 1, dst_h - 1],
     ]]).repeat(points_src.shape[0], 1, 1).to(
         tensor.device).to(tensor.dtype)
 
